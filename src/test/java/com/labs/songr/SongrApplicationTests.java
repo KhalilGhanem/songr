@@ -10,4 +10,10 @@ class SongrApplicationTests {
 	void contextLoads() {
 	}
 
+	@Test void testAlbum(){
+		Album NightVisions=new Album("Night Visions");
+		NightVisions.setArtist("Imagine Dragons");
+
+	}
+
 }
