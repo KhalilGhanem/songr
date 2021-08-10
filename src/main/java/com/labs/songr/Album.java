@@ -1,6 +1,15 @@
 package com.labs.songr;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Album {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String title, artist, imageUrl;
     private int songCount;
     private double length;
@@ -9,14 +18,23 @@ public class Album {
         this.title = title;
 
     }
+    public Album(){
+
+    }
 
     public Album(String title, String artist, String imageUrl, int songCount, double length) {
+
         this.title = title;
         this.artist = artist;
         this.imageUrl = imageUrl;
         this.songCount = songCount;
         this.length = length;
     }
+
+    public Integer getId() {
+        return id;
+    }
+
 
     public String getTitle() {
         return title;

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/albums">Albums</a></li>
+                    <li><a href="/addAlbums">Add Album</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+        <h2>Add a new Album</h2>
+         <form action="\albums" method="post">
+             <fieldset>
+                 <legend>Album Details:</legend>
+                 <label for="title">Title:</label><br>
+                 <input type="text" id="title" name="title" value="Enter A Title"><br><br>
+                 <label for="artist">Artist:</label><br>
+                 <input type="text" id="artist" name="artist" value="Enter Artist Name"><br><br>
+                 <label for="imageUrl">Image Url:</label><br>
+                 <input type="text" id="imageUrl" name="imageUrl" value="Enter mage Url"><br><br>
+                 <label for="songCount">Track Number:</label><br>
+                 <input type="text" id="songCount" name="songCount" value="Enter Track Number"><br><br>
+                 <label for="length">Length:</label><br>
+                 <input type="text" id="length" name="length" value="Enter Length "><br><br>
+                 <input type="submit" value="Add Album">
+             </fieldset>
+         </form>
+        </main>
+
+</body>
+</html>
