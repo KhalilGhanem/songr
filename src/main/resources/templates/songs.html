@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/albums">Albums</a></li>
+                    <li><a href="/addAlbums">Add Album</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Albums page</h1>
+            <div th:each="song :${songs}">
+                <h2>Album Title: <span th:text="${song.title}"></span> </h2>
+                <p>Length: <span th:text="${song.length}"></span></p>
+                <p>Track Number: <span th:text="${song.trackNumber}"></span></p>
+                <p>Album: <span th:text="${song.songAlbum}"></span></p>
+
+            </div>
+        </main>
+
+
+</body>
+</html>

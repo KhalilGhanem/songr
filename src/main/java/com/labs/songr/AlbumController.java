@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
@@ -60,6 +61,13 @@ public class AlbumController {
         albumRepository.save(album);
 
         return new RedirectView("/albums");
+    }
+
+    @GetMapping("/albums/{id}")
+    public String getAlbumById(@PathVariable(value = "id")Integer id, Model m){
+        Album album= albumRepository.findById((Integer)id).get();
+        m.addAttribute("newalbum",album);
+        return "album.html";
     }
 
 
